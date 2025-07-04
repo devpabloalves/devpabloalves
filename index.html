@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Alves - Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR-->
+
+
+    <header>
+        <div class="container header-content">
+            <nav class="main-nav">
+                <a href="#about" class="nav-link">Sobre mim</a>
+                <a href="#education" class="nav-link">Formação</a>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!--SOBRE MIM -->
+
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">Pablo Alves</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="eufoto.png" alt="Foto">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            Meu nome é Pablo e sou estudante de Análise e Desenvolvimento de Sistemas na UNINTER. Minha trajetória acadêmica e estudos pessoais têm me proporcionado uma base sólida em lógica de programação, desenvolvimento de software e sistemas de informação. Embora eu possua conhecimentos e interesse em design e desenvolvimento web, minha paixão e foco principal de carreira estão direcionados para a área de análise de dados. Busco constantemente aprofundar minhas habilidades em extrair, tratar e visualizar dados para transformá-los em insights valiosos e auxiliar na tomada de decisões estratégicas.
+                        </p>
+                        <p>
+                            Fora do mundo do código, gosto de me aventurar em diferentes hobbies que estimulam minha criatividade e bem-estar.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        
+        <!-- EDUCAÇÃO-->
+
+
+        <section id="education">
+            <div class="container">
+                <h2 class="section-title">Formação</h2>
+                <div class="education-grid">
+                    <div>
+                        <h3>Educação</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <p class="timeline-date">2024 - Presente</p>
+                                <h4 class="timeline-title">Análise e Desenvolvimento de Sistemas</h4>
+                                <p class="timeline-institution">UNINTER</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <p class="timeline-date">2021 - 2023</p>
+                                <h4 class="timeline-title">Técnico em Informática Integrado ao Ensino Médio</h4>
+                                <p class="timeline-institution">IF Goiano</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--PORTFOLIO-->
+
+
+        <section id="portfolio">
+            <div class="container" id="portfolio-container">
+                <h2 class="section-title">Portfólio</h2>
+                <div class="portfolio-grid">
+                    <div class="project-card">
+                        <img src="projeto.png" alt="Em andamento">
+                        <div class="project-content">
+                            <h3 class="project-title">Sales Dashboard</h3>
+                            <p class="project-description">Uma dashboard que representa graficamente as vendas de uma empresa fictícia.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Power BI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="projeto.png" alt="Em andamento">
+                        <div class="project-content">
+                            <h3 class="project-title">Predição Esportiva</h3>
+                            <p class="project-description">Um modelo que prevê o placar de partidas de futebol.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Excel</span>
+                                <span class="project-tag">Power Query</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTATO-->
+
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-form-wrapper">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+</html>

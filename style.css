@@ -1,0 +1,300 @@
+:root {
+  --ff: "Manrope", sans-serif;
+  --bg-dark: hsl(0, 0%, 0%);
+  --bg: hsl(0, 0%, 5%);
+  --bg-light: hsl(0, 0%, 10%);
+  --blue: hsl(200, 50%, 30%);
+  --blue-dark: hsl(200, 50%, 40%);
+  --text: hsl(0, 0%, 95%);
+  --text-muted: hsl(0, 0%, 70%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff);
+  font-weight: 700;
+  color: var(--text);
+}
+
+section {
+  padding: 5rem 0;
+  scroll-margin-top: 70px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* NAVBAR */
+
+header {
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px var(--bg-dark);
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* ANIMAÇÃO DA LINHA ABAIXO DO TEXTO DA NAVBAR */
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+}
+
+/*SOBRE MIM */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid hsl(0, 0%, 80%);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/*EDUCAÇÃO */
+
+.education-grid {
+  display: flex;
+  gap: 3rem;
+}
+
+.education-grid h3 {
+  margin: 10px;
+}
+
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--blue);
+  padding-left: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.05rem;
+  top: 5px;
+  width: 1rem;
+  height: 1rem;
+  background-color: hsl(200, 70%, 50%);
+  border-radius: 50%;
+  border: 4px solid var(--bg);
+}
+
+.timeline-date {
+  color: hsl(200, 75%, 50%);
+  font-weight: 600;
+}
+
+.timeline-title {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.timeline-institution {
+  color: var(--text-muted);
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  gap: 2rem;
+}
+
+#portfolio-container {
+  max-width: fit-content;
+}
+
+.project-card {
+  background-color: var(--bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--bg-dark);
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-tag {
+  background-color: hsl(200, 10%, 50%);
+  color: var(--text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: var(--blue);
+}
+
+.project-link:hover {
+  background: linear-gradient(0deg, var(--blue), var(--blue-dark));
+}
+
+/*CONTATO */
+.contact-form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--bg-dark);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--bg-dark);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: #4b5563;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: linear-gradient(0deg, var(--blue), var(--blue-dark));
+}
